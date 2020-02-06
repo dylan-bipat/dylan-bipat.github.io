@@ -15,10 +15,10 @@ body {
     font-size: 1.3em;
   }
   
-  p,ul,ol,dl,address {
+  p,ul,ol,dl,address,time {
     font-size: 1.1em;
   }
   
-  p, li, dd, dt, address {
+  p, li, dd, dt, address,time {
     line-height: 1.5;
   }
