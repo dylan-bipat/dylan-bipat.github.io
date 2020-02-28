@@ -1,38 +1,76 @@
 
 .header{
-	background-color: #2b4585;
 	display:flex;
 	justify-content: space-around;
-	color: #f0ebb2;
+	background-color: #b2ff77;
+	color: #ab5077;
+	padding: 15px;
 }
-.vertical-space{
+.space1{
 	padding-bottom: 15px;
+	background-color: #ab5077;
+}
+.space2{
+	padding-bottom: 150px;
+	background-color: #ab5077;
+}
+.space{
+	padding: 15px;
 }
 .wrapper{
-	background-color: red;
-	max-width: 960px;
+	background-color: #ab5077;
 	display: flex;
-	flex-direction: row;
-}
-.caption-div{
-	display: flex;
-	align-items: left;
+	flex-direction: column;
+	align-items: center;
 }
 .container{
 	display: flex;
+	max-width: 960px;
+	margin: 0 auto;
+}
+.image{
+	border-style: dotted solid double dashed;
+	border-width: 2px;
+	border-radius: 4px;
+}
+.caption{
+	background-color:  #ab5077;
+	border-style: dotted solid double dashed
+	padding: 15px;
+}
+.one{
+	display: flex;
 	flex-direction: column;
-
+	column-width: 100px;
+	padding: 3%;
+	flex: 33.33%;
+	align-items: center;
+	width: 700px;
 }
-.centerbox{
-	display: flex;
-	justify-content: center;
-}
-.information{
-	display: flex;
-	flex-direction: column;
-}
-.information-div{
-	display: flex;
-	flex-wrap: wrap-reverse;
+.two{
+	padding: 3%;
+	flex: 66.66%;
+	background-color: #ab5077;
+	border-style: dotted solid double dashed;
 }
 
+.title{
+	font-family: 'Oswald';
+}
+.description{
+	font-family: 'Muli';
+}
+
+@media screen and (max-width: 1000px) {
+  .container {
+    flex-direction: column;
+  }
+  .one {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+  .one img {
+    margin-bottom: 15px;
+  }
+}
