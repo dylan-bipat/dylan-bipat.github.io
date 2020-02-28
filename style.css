@@ -4,10 +4,10 @@
 	justify-content: space-around;
 	background-color: #b2ff77;
 	color: #ab5077;
-	padding: 15px;
+	padding: 20px;
 }
 .space1{
-	padding-bottom: 15px;
+	padding-bottom: 20px;
 	background-color: #ab5077;
 }
 .space2{
@@ -30,13 +30,13 @@
 }
 .image{
 	border-style: dotted solid double dashed;
-	border-width: 2px;
-	border-radius: 4px;
+	border-width: 3px;
+	border-radius: 6px;
 }
 .caption{
 	background-color:  #ab5077;
 	border-style: dotted solid double dashed
-	padding: 15px;
+	padding: 20px;
 }
 .one{
 	display: flex;
@@ -71,6 +71,6 @@
     justify-content: space-evenly;
   }
   .one img {
-    margin-bottom: 15px;
+    margin-bottom: 20px;
   }
 }
