@@ -3,12 +3,11 @@ let myImage = document.querySelector('img');
 myImage.onclick = function() {
     let mySrc = myImage.getAttribute('src');
     if(mySrc === 'beginner-html-site-styled-gh-pages/images/firefox-icon.png') {
-      myImage.setAttribute ('src','beginner-html-site-styled-gh-pages/images/firefox2.png');
+      myImage.setAttribute ('src','lab_4/beginner-html-site-styled-gh-pages/images/firefox2.png');
     } else {
-      myImage.setAttribute ('src','beginner-html-site-styled-gh-pages/images/firefox-icon.png');
+      myImage.setAttribute ('src','lab_4/beginner-html-site-styled-gh-pages/images/firefox-icon.png');
     }
 }
-
 
 let myButton = document.querySelector('button');
 let myHeading = document.querySelector('h1');
@@ -28,7 +27,7 @@ function setUserName() {
 
   myButton.onclick = function() {
     setUserName();
-  }  
+  }
 
   function setUserName() {
     let myName = prompt('Please enter your name.');
