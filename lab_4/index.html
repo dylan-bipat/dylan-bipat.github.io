@@ -27,8 +27,34 @@
     <script>
       function clickMe() {
         const content = document.querySelector(".content");
-        content.innerHTML = "Hello world";
+        content.innerHTML = "Hello World";
+
+        const headerContent = document.querySelector(".header");
+        let name = "Dylan";
+        headerContent.textContent = name + "'s Lab 4"
+
+        content.innerHTML += "<p class =\"Paragraph1\"></p><p class=\"Paragraph2\"></p>";
+        
+        const p1 = document.getElementsByClassName("Paragraph1");
+        p1[0].innerHTML += "My name has " + name.length + " characters."
+
+        const p2 = document.getElementsByClassName("Paragraph2");
+        p2[0].innerHTML += "The third character of my name is " + name.charAt(2);
+
+        let lastName = "Bipat";
+        p2[0].innerHTML += "<br>" + "The last three letters of my name are " + lastName.slice(lastName.length - 3) + "<br>";
+
+        let fullName = "Dylan Bipat";
+        const dylan = fullName.slice(0,5);
+        const bipat = fullName.slice(6,fullName.length);
+
+        let totalLength = dylan.length + bipat.length;
+
+        headerContent.textContent = fullName + "'s Lab 4 " + totalLength;
+
+
       }
     </script>
   </body>
 </html>
+
