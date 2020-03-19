@@ -266,26 +266,49 @@
     ]
     console.log("List of countries in the world", countries);
 
+    let newHeader =  document.querySelector(".header");
+
+    let content = document.querySelector(".content");
+    newHeader.innerHTML = "Dylan's List of Countries";
+
+    let coutryList = [];
+    countries.forEach(country => {
+      arr.push(country.name);
+    });
+
+    let orderedList = document.createElement("ol");
+    orderedList.className = "countries";
+
     function clickMe() {
-      const headerContent = document.querySelector(".header");
-        let name = "Dylan";
-        headerContent.textContent = name + "'s List of Countries"
-       
-        document.getElementsByClassName(".content").innerHTML += countries;
-      
-      const random = [];
-          
-
-      for(let i = 0; i<25; i++){
-        let x = Math.floor(Math.random()* 243);
-        random.push(x);
+      let array = [];
+      let not_array = [];
+      let not_used = [];
+      while(array.length < 25){
+        var random = Math.floor(Math.random()*242) + 1;
+        if(array.indexOf(random) === -1){
+          array.push(random);
+        }
       }
-
-      for(let i = 0; i < random.length; i++){
-        let country = countries[random[i]];
-        document.querySelector(".countries").innerHTML += "<li>" + "<strong>"
+      for(i=0;i<243;i++){
+        not_array.push(i);
       }
-      document.getElementsByClassName(".content").innerHTML += countries;
+      not_array.forEach(number => {
+        if(!(arr.includes(number))) {
+          not_used.push(number);
+        }
+      });
+
+      let list = "";
+      array.forEach(number => {
+        list += `<li><b>${countries[number].code}</b> ${countries[number].name}</li>`;
+      });
+
+      content.innerHTML = "";
+      ordered_list.innerHTML = list;
+      content.appendChild(ordered_list);
+      not_used.forEach(number =>{
+        consolse.log(countries[number]);
+      });
     }
     
 
