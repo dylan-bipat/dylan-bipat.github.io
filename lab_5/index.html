@@ -299,23 +299,17 @@
         });
 
         let list = "";
-        array.forEach(number=>{
-          list+=`<li><b>${countries[number].code}</b> ${countries[number].name}</li>`;
+        array.forEach(num=>{
+          list+=`<li><b>${countries[num].code}</b> ${countries[num].name}</li>`;
         });
 
         content.innerHTML = "";
         ordered_list.innerHTML= list;
         content.appendChild(ordered_list);
-        not_used.forEach(number=>{
-          console.log(countries[number]);
+        not_used.forEach(num=>{
+          console.log(countries[num]);
           });
         }
-
-    
-    
-
-    
-
   </script>
 </body>
 
