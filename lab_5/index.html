@@ -266,50 +266,52 @@
     ]
     console.log("List of countries in the world", countries);
 
-    let newHeader =  document.querySelector(".header");
+    let header = document.querySelector(".header");
 
     let content = document.querySelector(".content");
-    newHeader.innerHTML = "Dylan's List of Countries";
+    header.innerHTML = "Dylan's List Of Countries";
 
-    let coutryList = [];
+    let a = [];
     countries.forEach(country => {
-      arr.push(country.name);
-    });
+      a.push(country.name);
+      });
 
-    let orderedList = document.createElement("ol");
-    orderedList.className = "countries";
-
+    let ordered_list = document.createElement("ol");
+    ordered_list.className = "countries";
+    
     function clickMe() {
       let array = [];
       let not_array = [];
       let not_used = [];
       while(array.length < 25){
-        var random = Math.floor(Math.random()*242) + 1;
-        if(array.indexOf(random) === -1){
-          array.push(random);
+        var ran = Math.floor(Math.random() * 242) + 1;
+        if(array.indexOf(ran) === -1) 		array.push(ran);
         }
-      }
+        
       for(i=0;i<243;i++){
         not_array.push(i);
-      }
-      not_array.forEach(number => {
-        if(!(arr.includes(number))) {
-          not_used.push(number);
         }
-      });
 
-      let list = "";
-      array.forEach(number => {
-        list += `<li><b>${countries[number].code}</b> ${countries[number].name}</li>`;
-      });
+      not_array.forEach(number => {
+        if(!(a.includes(number))){
+          not_used.push(number);
+          }
+        });
 
-      content.innerHTML = "";
-      ordered_list.innerHTML = list;
-      content.appendChild(ordered_list);
-      not_used.forEach(number =>{
-        consolse.log(countries[number]);
-      });
-    }
+        let list = "";
+        array.forEach(number=>{
+          list+=`<li><b>${countries[number].code}</b> ${countries[number].name}</li>`;
+        });
+
+        content.innerHTML = "";
+        ordered_list.innerHTML= list;
+        content.appendChild(ordered_list);
+        not_used.forEach(number=>{
+          console.log(countries[number]);
+          });
+        }
+
+    
     
 
     
