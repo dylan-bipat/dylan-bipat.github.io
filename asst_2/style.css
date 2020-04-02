@@ -1,6 +1,9 @@
-h1 {
+h1, h2 {
   font-family: helvetica, arial, sans-serif;
   text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 body {
