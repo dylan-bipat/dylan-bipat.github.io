@@ -2,6 +2,7 @@
 <html lang="en">
   <head>
     <title>Forms Lab</title>
+    <link rel = "stylesheet" type = "text/css" href = "form_style.css" />
   </head>
   <body>
     <div class="wrapper">
@@ -10,6 +11,13 @@
           <h1>HTML 1 Forms Lab</h1>
         </div>
       </div>
+        <form action = "https://nameless-thicket-21836.herokuapp.com/lab" method="post">
+          <label for = "name">Name:</label>
+          <input type="text" id="name" />
+          <label for = "interests">Interests:</label>
+          <textarea id="interests" name="interests" rows="5" cols="33">by default this element is filled with this text</textarea>
+          <button class="button" type="submit">Submit</button>
+        </form>
     </div>
   </body>
 </html>
