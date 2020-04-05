@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Maps Lab</title>
+    <link rel="stylesheet" type="text/css" href="./styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
+      integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+      crossorigin=""
+    />
+    <script
+      src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
+      integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
+      crossorigin=""
+    ></script>
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="wrapper">
+        <div class="header">Frontend Libraries: Maps Lab</div>
+        <div class="content">
+          When your lab is done, this should be replaced with a stylish map.
+        </div>
+        <div class="footer">Make some markers work!</div>
+      </div>
+    </div>
+    <script>
+      var map = document.createElement("div");
+        map.id = "map";
+        var content = document.querySelector(".content");
+        content.appendChild(map);
+        map.style = "width: 640px; height: 480px;";
+
+        var center = L.map("map").setView([38.9888, -76.9411], 15);
+
+        L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
+          attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+          maxZoom: 18,
+          id: 'mapbox/streets-v11',
+          tileSize: 512,
+          zoomOffset: -1,
+          accessToken: 'pk.eyJ1IjoiZGJpcGF0IiwiYSI6ImNrOG5pNGt4eTB5eTIzZnF4Mm01MDY3NzkifQ.Pc9SwzML1c2oOJMTUfvVtw'
+        }).addTo(center);
+
+        var McKeldin = L.marker([38.986235, -76.944613]).addTo(map_area);
+        McKeldin.bindPopup("McKeldin Library");
+
+        let restaurants = [[38.895049,-76.822919], [38.980049,-76.937981], [39.076438,-76.868105]] #subway, panda, three brothers
+
+        L.marker([restaraunts[0][0], restaraunts[0][1]]).addTo(map_area).bindPopup("Subway");
+
+        L.marker([restaraunts[1][0], restaraunts[1][1]]).addTo(map_area).bindPopup("Panda Express");
+
+        L.marker([restaraunts[2][0], restaraunts[2][1]]).addTo(map_area).bindPopup("Three Brothers");
+
+
+    </script>
+  </body>
+</html>
