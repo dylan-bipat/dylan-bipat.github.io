@@ -44,16 +44,16 @@
           accessToken: 'pk.eyJ1IjoiZGJpcGF0IiwiYSI6ImNrOG5pNGt4eTB5eTIzZnF4Mm01MDY3NzkifQ.Pc9SwzML1c2oOJMTUfvVtw'
         }).addTo(center);
 
-        var McKeldin = L.marker([38.986235, -76.944613]).addTo(map_area);
+        var McKeldin = L.marker([38.986235, -76.944613]).addTo(center);
         McKeldin.bindPopup("McKeldin Library");
 
-        let restaurants = [[38.895049,-76.822919], [38.980049,-76.937981], [39.076438,-76.868105]] #subway, panda, three brothers
+        let restaurants = [[38.895049,-76.822919], [38.980049,-76.937981], [39.076438,-76.868105]] //subway, panda, three brothers
 
-        L.marker([restaraunts[0][0], restaraunts[0][1]]).addTo(map_area).bindPopup("Subway");
+        L.marker([restaraunts[0][0], restaraunts[0][1]]).addTo(center).bindPopup("Subway");
 
-        L.marker([restaraunts[1][0], restaraunts[1][1]]).addTo(map_area).bindPopup("Panda Express");
+        L.marker([restaraunts[1][0], restaraunts[1][1]]).addTo(center).bindPopup("Panda Express");
 
-        L.marker([restaraunts[2][0], restaraunts[2][1]]).addTo(map_area).bindPopup("Three Brothers");
+        L.marker([restaraunts[2][0], restaraunts[2][1]]).addTo(center).bindPopup("Three Brothers");
 
 
     </script>
